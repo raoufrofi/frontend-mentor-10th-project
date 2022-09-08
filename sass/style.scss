@@ -1,0 +1,34 @@
+@use "globals" as g;
+@use "typo";
+@use "card";
+// @use "bottom";
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  padding: 3rem 0;
+  font-family: g.$poppins;
+  position: relative;
+  background-color: g.$very-light-gray;
+}
+
+main {
+  width: min(375px, 85%);
+  text-align: center;
+  margin-inline: auto;
+  @include g.breakpoint(mid) {
+    width: min(1280px, 85%);
+  }
+  // @include g.breakpoint(pc) {
+  //   width: min(1280px, 85%);
+  //   gap: 6em;
+  // }
+}
+
+header {
+  width: min(100%, 700px);
+  margin-inline: auto;
+}

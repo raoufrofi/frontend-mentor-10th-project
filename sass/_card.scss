@@ -1,0 +1,54 @@
+@use "globals" as g;
+
+.card-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 2em;
+  align-items: center;
+
+  text-align: left;
+  margin-top: 2em;
+
+  @include g.breakpoint(mid) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4em;
+  }
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 1px 10px 10px rgb(236, 236, 236);
+  border-radius: 5px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  // width: ;
+
+  img {
+    width: 100px;
+    align-self: flex-end;
+  }
+
+  &__one {
+    border-top: 3px solid g.$cyan;
+  }
+  &__two {
+    border-top: 3px solid g.$red;
+  }
+  &__three {
+    border-top: 3px solid g.$orange;
+  }
+  &__four {
+    border-top: 3px solid g.$blue;
+  }
+}
+
+.card__double {
+  // flex-basis: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  gap: 1em;
+}
